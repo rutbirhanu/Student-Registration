@@ -54,7 +54,7 @@ fetchData()
             <tbody>
               {
                 studentsList.map((student, index) => {
-                  return <tr key={student.index} style={{ backgroundColor: index % 2 === 0 ? "white" : "rgb(147, 65, 65)"}}>
+                  return <tr key={index} style={{ backgroundColor:"rgb(147, 65, 65)"}}>
                     <td>{index+1}</td>
                     <td>{student.name}</td>
                     <td>{student.age}</td>
