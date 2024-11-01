@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    background-color: white
+}
+
+form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    max-width: 42vw;
+    padding: 20px;
+}
+
+.page-container h2 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(90deg, #048ece, #c23c03);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 28px;
+    /* color: ; */
+}
+.input-container {
+    width: 100%;
+}
+
+.field-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* max-width: 32vw;
+    min-width: 230px; */
+    width: 100%;
+    margin: 5px 3px;
+    position: relative;
+}
+
+
+input:invalid~span {
+    display: block;
+}
+
+.icon {
+    position: absolute;
+    top: 55%;
+    left: 15px;
+    height: 12px;
+    color: #8a8a8a;
+}
+
+#text-input {
+    border: 2px solid rgb(226, 226, 226);
+    outline: none;
+    border-radius: 10px;
+    height: 37px;
+    margin: 5px;
+    padding-left: 30px;
+}
+
+.button-container button:hover {
+    cursor: pointer;
+}
+
+.row-fields {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.parent-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-container {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid rgb(241, 241, 241);
+    border-radius: 10px;
+    width: 45vw;
+    padding: 30px 15px;
+    box-shadow: 0 0 10px 2px rgb(240, 240, 240);
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-btn {
+    outline: none;
+    border: none;
+    padding: 12px 35px;
+    width: 260px;
+    /* width: 100%; */
+    border-radius: 10px;
+    background-color: rgb(127, 245, 178);
+    margin: 30px 0;
+}
+
+
+.login-link span {
+    color: rgb(16, 150, 16);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+@media screen and (max-width:800px) {
+
+    .page-container {
+        width: 95vw;
+    }
+
+    .page-container form {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .input-container {
+        width: 80vw;
+    }
+
+    .signup-btn {
+        width: 70vw;
+    }
+
+
+    .row-fields {
+        width: 80vw;
+    }
+}
+
+
+.toast-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    border: 1px solid green;
+    height: 40px;
+    width: 270px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 2px rgb(209, 209, 209);
+}
+
+.toast-container span {
+    padding: 0 10px;
+}
+
+.toast-container::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: green;
+    animation: slideOut 5s linear forwards;
+}
+
+
+.students-page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.students-list table {
+    border-collapse: collapse;
+    padding: 1em;
+}
+
+.students-list td {
+    padding: 5px 2em;
+}
+
+.students-list th {
+    background-color: rgb(41, 41, 41);
+    padding: 10px 2em;
+    color: white;
+}
+
+.info-card-container h4, h2 {
+    margin: 6px;
+    color: rgb(66, 66, 66);
+    background-color: transparent;
+}
+
+.info-card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(139, 195, 238);
+    justify-content: flex-start;
+    align-items: center;
+    height: 5em;
+    width: 13em;
+    border-radius: 5px;
+    gap: 0;
+    margin: 3em auto ;
+}
