@@ -20,8 +20,8 @@ const Registration = async (req, res) => {
 const GetAllStudents = async (req, res) => {
     try {
         const list = await StudentModel.find()
-
-        res.status(200).json(list)
+        const count = await StudentModel.countDocuments();
+        res.status(200).json({count, student:list})
     }
     catch (err) {
         res.status(500).json(err)

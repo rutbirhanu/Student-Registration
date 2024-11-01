@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 function StudentList() {
 
   const [studentsList, setStudentsList] = useState([])
+  const [count, setCount]= useState("")
   
   useEffect(() => {
     const fetchData = async() => {
@@ -14,8 +15,8 @@ function StudentList() {
     });
 
       const formRes = await response.json()
-      setStudentsList(formRes)
-      console.log(formRes)
+      setStudentsList(formRes.student)
+      setCount(formRes.count)
       
     if (response.ok) {
         console.log("everything ok")
@@ -36,7 +37,7 @@ fetchData()
         <h1>Registered Students</h1>
         <div className="info-card-container">
           <h4>Total Students Registered</h4>
-          <h2>5</h2>
+        <h2>{count}</h2>
         </div>
         <div className="students-list">
           <table>
